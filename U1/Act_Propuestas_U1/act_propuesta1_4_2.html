@@ -3,15 +3,15 @@
 
 <body>
     <h1>Cambio de imagenes con JavaScript</h1>
-    <img id="miFPImagen" onclick="cambiaPic()" src="messi.png"width="100" height="180">
+    <img id="miFPImagen" onclick="cambiaPic()" src="messi.png"width="250" height="250">
     <p>Haz clic sobre las letras para cambiarlas.</p>
     <script>
         function cambiaPic() {
             var image=document.getElementById('miFPImagen');
-            if (image.src.match("green")) {
-                image.src="messi.png";    
+            if (image.src.match("messi.png")) {
+                image.src="ronaldo.png";    
             }else{
-                image.src="ronaldo.png"
+                image.src="messi.png"
             }
         }
     </script>
