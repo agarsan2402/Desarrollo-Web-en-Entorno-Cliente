@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1>Cambio de imagenes con JavaScript</h1>
+    <img id="miFPImagen" onclick="cambiaPic()" src="fotos/messi.png"width="250" height="250">
+    <p>Haz clic sobre las fotos para cambiarlas.</p>
+    <script>
+        var contador=0;
+        function cambiaPic() {
+            var image=document.getElementById('miFPImagen');
+            switch (contador) {
+                case 0:
+                image.src="fotos/messi.png";
+                contador=1; 
+                    break;
+                case 1:
+                image.src="fotos/ronaldo.png";
+                contador=2; 
+                    break;
+                case 2:
+                image.src="fotos/mbappe.png";
+                contador=3; 
+                    break;
+                case 3:
+                image.src="fotos/vini.png";
+                contador=0; 
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
