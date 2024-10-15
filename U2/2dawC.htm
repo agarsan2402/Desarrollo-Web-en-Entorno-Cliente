@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Relacion 1</title>
+</head>
+<body>
+    <script>
+        var nombre, edad;
+        //bucle que pide un nombre hasta que se introduce una cadena
+        do {
+            nombre=prompt("Dime tu nombre");
+        } while (!isNaN(nombre));
+        //bucle que pide la edad hasta que se introduce un numero
+        do {
+            edad=prompt("Dime tu edad");
+        } while (isNaN(edad));
+        //se muestra el total de dias vividos
+        window.alert("Nombre: "+nombre+"\nEdad: "+edad+"\nDias vividos: "+(edad*365));
+    </script>
+</body>
+</html>
