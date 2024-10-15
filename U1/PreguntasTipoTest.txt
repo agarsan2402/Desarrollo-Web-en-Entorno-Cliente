@@ -1,0 +1,6 @@
+Pregunta tipo test
+¿Cuáles de las siguientes afirmaciones sobre ReactJS y Angular son correctas?
+a) ReactJS utiliza Context API para la gestión de estado global.
+b) Angular no requiere TypeScript, se puede utilizar con JavaScript ES6+ puro.
+c) Angular usa Angular CLI para crear y gestionar proyectos.
+d) ReactJS tiene su propio motor de transpilación y no requiere Babel.
