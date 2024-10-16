@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 - Relacion 1</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        var num=prompt("Dime un numero entero");
+        num = parseInt(num); // Convertir la cadena de texto a un número entero
+        if (!isNaN(num)) { // Comprobar si el valor introducido es un número válido
+            let hep = num.toString(5);// Convertir el número a base 5
+            let hex = num.toString(16); // Convertir el número a base 16
+            window.alert("En base 5 es: " + hep);
+            window.alert("En base 16 es: " + hex);
+        } else {
+            window.alert("Por favor, introduce un número válido.");
+        }
+    </script>
+</body>
+</html>
