@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 - Relacion 1</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        const MUL=23;
+        var cont=1, suma=0, acu="";
+        while (MUL*cont<1000) {
+            acu+=" "+MUL*cont.toString()+" ";
+            suma+=MUL*cont;
+            cont++;
+        }
+        window.alert("multiplos de 23 menores de 1000: "+acu);
+        window.alert("la suma de todos da "+suma);
+    </script>
+</body>
+</html>
