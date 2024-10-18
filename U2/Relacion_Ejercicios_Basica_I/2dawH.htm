@@ -10,6 +10,24 @@
         var num=prompt("Dime un numero entero");
         num = parseInt(num); // Convertir la cadena de texto a un número entero
         if (!isNaN(num)) { // Comprobar si el valor introducido es un número válido
+            var resto=0, cociente=num, res=""; 
+            const BASE=16;//cambiar la base
+            while (cociente>=BASE) {
+                resto=cociente%BASE;
+                resto=parseInt(resto);
+                res=resto.toString()+res;
+                cociente/=BASE;
+                cociente=parseInt(cociente);    
+            }
+            res=cociente.toString()+res;
+            window.alert("Matematicamente");
+            window.alert("En base "+BASE+" es: " + res);
+        } else {
+            window.alert("Por favor, introduce un número válido.");
+        }
+        
+        if (!isNaN(num)) { // Comprobar si el valor introducido es un número válido
+            window.alert("Mediante metodos");
             let hep = num.toString(5);// Convertir el número a base 5
             let hex = num.toString(16); // Convertir el número a base 16
             window.alert("En base 5 es: " + hep);
