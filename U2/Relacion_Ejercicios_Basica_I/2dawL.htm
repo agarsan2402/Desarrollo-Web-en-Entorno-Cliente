@@ -6,6 +6,28 @@
     <title>Ejercicio 12 - Relacion 1</title>
 </head>
 <body>
-    
+    <script>
+        do {
+            var num1=prompt("dime un numero positivo que sea menor de 57"), num2=prompt("dime otro numero positivo que sea menor de 57");
+            var respuesta;
+            var continuar;
+            if (num1<0||num2<0||num1>57||num2>57) {
+                window.alert("has introducido algun numero negativo o mayor que 57");
+            }else{
+                window.alert("el producto de "+num1+" y "+num2+" es "+num1*num2);
+            }
+            respuesta=prompt("¿quieres volver a empezar?s/n");
+            switch (respuesta) {
+                case "s":
+                    continuar=true;
+                    break;
+                case "n":
+                    continuar=false;
+                    break;
+                default:
+                    break;
+            }
+        } while (continuar!=false);
+    </script>
 </body>
 </html>
