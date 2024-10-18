@@ -7,7 +7,18 @@
 </head>
 <body>
     <script lang="JavaScript">
+        var base=8, decimal=0, num, resto=0;
+        num=prompt("Dime un numero en base 8");
+        num=parseInt(num);
+        while(num!=0){
+			resto=num%2;
+			num/=10;
+			decimal+=base*resto;
+			base*=2;
+		}
+        window.alert(decimal);
         
+    
     </script>
 </body>
 </html>
