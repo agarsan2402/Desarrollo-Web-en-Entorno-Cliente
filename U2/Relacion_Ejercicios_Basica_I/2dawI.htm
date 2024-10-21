@@ -7,18 +7,35 @@
 </head>
 <body>
     <script lang="JavaScript">
-        var base=8, decimal=0, num, resto=0;
-        num=prompt("Dime un numero en base 8");
-        num=parseInt(num);
-        while(num!=0){
-			resto=num%2;
-			num/=10;
-			decimal+=base*resto;
-			base*=2;
-		}
-        window.alert(decimal);
-        
-    
+        var octal = prompt("Dime un número en octal");
+        function convertirOctalADecimal(o) {
+            var acu = 0;
+            var base = 8;
+            // Recorremos la cadena de derecha a izquierda
+            for (let index = 0; index < o.length; index++) {
+                // Convertimos el carácter en número y calculamos el valor decimal
+                acu += parseInt(o.charAt(o.length - 1 - index)) * Math.pow(base, index);
+            }
+            alert("En decimal seria: "+acu);
+            return acu;
+        }
+        function convertirOctalABinario(d) {
+            o = parseInt(d);
+            var resto=0, cociente=d, res="";
+            const BASE=2;//cambiar la base
+            while (cociente>=BASE) {
+                resto=cociente%BASE;
+                resto=parseInt(resto);
+                res=resto.toString()+res;
+                cociente/=BASE;
+                cociente=parseInt(cociente);    
+            }
+            res=cociente.toString()+res;
+            window.alert("Matematicamente");
+            window.alert("En base "+BASE+" es: " + res);
+        }
+        alert(convertirOctalABinario(convertirOctalADecimal(octal)));
+
     </script>
 </body>
 </html>
