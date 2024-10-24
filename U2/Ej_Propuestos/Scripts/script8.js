@@ -1,7 +1,16 @@
+// Asigna el evento click al botón
+var boton = document.getElementById('mesAño');
+boton.addEventListener("click", extraerMesAño, false);
 
-var dato1 = "Ronaldo "+5+5;
-var dato2 = 5+5+"Ronaldo ";
-alert("En la primera variable muestra esto: "+dato1+" que concatena los numeros como una cadena");
-alert("En la segunda variable muestra esto: "+dato2+" que suma los numeros y concatena con la cadena");
+// Función para extraer el mes y el año
+function extraerMesAño() {
+    // Convierte el valor del input a una fecha
+    var f = new Date(document.getElementById("fecha").value);
 
+    // Extrae el mes y el año
+    var mes = f.getMonth() + 1; // Sumar 1 porque getMonth() devuelve de 0 a 11
+    var año = f.getFullYear();
 
+    // Muestra el resultado
+    document.getElementById('res').innerHTML = "Mes: " + mes + ", Año: " + año;
+}
