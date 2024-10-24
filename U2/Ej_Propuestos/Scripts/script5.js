@@ -1,11 +1,23 @@
-var boton = document.getElementById('calcular');
-boton.addEventListener("click", calculo, false);
+// Definimos una variable global
+var nombre = "Juan";
+var cad;
+alert("Antes de sobrescribir: " + nombre); // "Juan"
 
-function calculo() 
-{
-    var a = document.getElementById('a').value;
-    var b = document.getElementById('b').value;
-    a=parseInt(a);
-    b=parseInt(b);
-    document.getElementById('res').innerHTML ="Si "+a+" es menor que "+b+" se suma 1 a "+a+" en caso contrario se suma a "+b+"resultado: "+(a<b?a+1:b+1);
+// Sobrescribimos la variable global
+nombre = "Pedro";
+
+alert("Después de sobrescribir: " + nombre); // "Pedro"
+
+// Definimos una función global
+function saludar() {
+    return("Hola, soy Juan");
 }
+cad=saludar(); // "Hola, soy Juan"
+alert(cad);
+
+// Sobrescribimos la función global con una nueva implementación
+function saludar() {
+    return("Hola, soy Pedro");
+}
+cad=saludar(); // "Hola, soy Pedro"
+alert(cad);
