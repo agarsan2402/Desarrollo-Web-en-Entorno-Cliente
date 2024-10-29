@@ -5,6 +5,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content:center;
 }
 .titulo{
     color: rgb(207, 70, 70);
@@ -16,7 +17,6 @@ body{
 }
 .tablas{
     display: flex;
-    padding: 0px 300px;
     justify-content:space-between;
 }
 .tabla{
@@ -24,10 +24,21 @@ body{
     border: solid 6px rgb(207, 70, 70);
     border-radius: 15px;
     flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
 }
 .tabla p{
     font-weight: bold;
 }
-.tabla h2{
+h2{
     text-decoration: underline;
+}
+.desplazamiento{
+    display: flex;
+    margin: 0 auto;
+    width: 20%;
+    border: solid 6px rgb(207, 70, 70);
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content:center;
 }
