@@ -27,3 +27,9 @@ while (j<=10){
     j++;
 } 
 document.getElementById('t9').innerHTML = cad;
+
+function desplazamiento_Drcha() {
+    
+}
+document.write((125>>3));
+document.write((625<<3));
