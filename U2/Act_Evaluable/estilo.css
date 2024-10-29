@@ -19,6 +19,9 @@ body{
     display: flex;
     border: dotted 6px rgb(245, 84, 84);
     border-radius: 15px;
-    padding: 25px;
+    padding: 0px 300px;
     justify-content:space-between;
+}
+.tablas table{
+    border: 1;
 }
