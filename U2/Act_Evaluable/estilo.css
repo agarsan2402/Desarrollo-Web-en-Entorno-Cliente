@@ -7,8 +7,7 @@ body{
     text-align: center;
 }
 .titulo{
-    border: dotted 6px rgb(245, 84, 84);
-    border-radius: 15px;
+    color: rgb(207, 70, 70);
     padding: 25px;
 }
 
@@ -17,11 +16,18 @@ body{
 }
 .tablas{
     display: flex;
-    border: dotted 6px rgb(245, 84, 84);
-    border-radius: 15px;
     padding: 0px 300px;
     justify-content:space-between;
 }
-.tablas table{
-    border: 1;
+.tabla{
+    display: flex;
+    border: solid 6px rgb(207, 70, 70);
+    border-radius: 15px;
+    flex-direction: column;
+}
+.tabla p{
+    font-weight: bold;
+}
+.tabla h2{
+    text-decoration: underline;
 }
