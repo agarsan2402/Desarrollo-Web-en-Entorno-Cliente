@@ -1,44 +1,60 @@
-body{
-    background-color: rgb(250, 227, 183);
+/* Estilo para el fondo de toda la página */
+body {
+    background-color: rgb(250, 227, 183); /* Color de fondo claro para una apariencia agradable */
 }
-.contenedor{
+/* Contenedor principal para centrar todo el contenido de la página */
+.contenedor {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organiza los elementos en columna */
     text-align: center;
-    justify-content:center;
-}
-.titulo{
-    color: rgb(207, 70, 70);
-    padding: 25px;
+    justify-content: center; /* Centra verticalmente el contenido dentro del contenedor */
 }
 
-.titulo h1{
-    text-decoration: underline;
+/* Estilo para los títulos principales */
+.titulo {
+    color: rgb(207, 70, 70); /* Color del texto  */
+    padding: 25px; /* Espaciado alrededor del título para mayor separación */
 }
-.tablas{
+
+/* Subrayado para los títulos h1 */
+.titulo h1 {
+    text-decoration: underline; /* Añade una línea debajo del título principal */
+}
+
+/* Contenedor para las tablas, para distribuirlas horizontalmente */
+.tablas {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between; /* Distribuye el espacio uniformemente entre las tablas */
 }
-.tabla{
+
+/* Estilo para cada tabla individual */
+.tabla {
     display: flex;
-    border: solid 6px rgb(207, 70, 70);
-    border-radius: 15px;
-    flex-direction: column;
-    width: 20%;
-    margin: 0 auto;
+    border: solid 6px rgb(207, 70, 70); /* Borde rojo  */
+    border-radius: 15px; /* Bordes redondeados para un diseño suave */
+    flex-direction: column; /* Organiza los elementos en columna */
+    width: 20%; /* Ancho de cada tabla */
+    margin: 0 auto; /* Centra cada tabla dentro de su contenedor */
 }
-.tabla p{
+
+/* Estilo para el texto en los párrafos de cada tabla */
+.tabla p {
+    font-weight: bold; /* Hace el texto de los resultados más resaltado */
+}
+
+/* Subrayado para todos los subtítulos h2 */
+h2 {
+    text-decoration: underline; /* Añade una línea debajo de los subtítulos */
+}
+
+/* Contenedor para la sección de operaciones con desplazamientos */
+.desplazamiento {
+    display: flex;
     font-weight: bold;
-}
-h2{
-    text-decoration: underline;
-}
-.desplazamiento{
-    display: flex;
-    margin: 0 auto;
-    width: 20%;
-    border: solid 6px rgb(207, 70, 70);
-    border-radius: 15px;
-    flex-direction: column;
-    justify-content:center;
+    margin: 0 auto; /* Centra la sección de desplazamiento en la página */
+    width: 20%; /* Define el ancho del contenedor */
+    border: solid 6px rgb(207, 70, 70); /* Borde rojo grueso similar a las tablas */
+    border-radius: 15px; /* Bordes redondeados */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra el contenido dentro del contenedor */
 }
