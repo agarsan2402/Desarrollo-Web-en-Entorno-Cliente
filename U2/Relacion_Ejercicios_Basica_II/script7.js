@@ -1,4 +1,4 @@
-//Ejercicio 5
+//Ejercicio 7
 var btn = document.getElementById('calculo');
 btn.addEventListener("click", calculo, false);
 function calculo() 
