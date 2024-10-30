@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(250, 227, 183);
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+}
+.titulo{
+    color: rgb(207, 70, 70);
+    padding: 25px;
+}
+
+.titulo h1{
+    text-decoration: underline;
+}
+.tablas{
+    display: flex;
+    justify-content:space-between;
+}
+.tabla{
+    display: flex;
+    border: solid 6px rgb(207, 70, 70);
+    border-radius: 15px;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+}
+.tabla p{
+    font-weight: bold;
+}
+h2{
+    text-decoration: underline;
+}
+.desplazamiento{
+    display: flex;
+    margin: 0 auto;
+    width: 20%;
+    border: solid 6px rgb(207, 70, 70);
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content:center;
+}
