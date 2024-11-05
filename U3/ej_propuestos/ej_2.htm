@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago</title>
+</head>
+<body>
+    <div id="mio"></div>
+    <div id="tuyo"></div>
+    <script>
+        var miCoche = "";
+        var tuCoche = "";
+        function coche(modelo, color, kms, combustible, matricula) {
+            this.modelo = modelo;
+            this.color = color;
+            this.kms = kms;
+            this.combustible = combustible;
+            this.matricula = matricula;
+        }
+        var elmio = new coche("Mercedes E330", "negro", 120000, "diesel", "1111A");
+        var eltuyo = new coche("BMV 318", "blanco", 210000, "gasolina", "1111B");
+        delete elmio.matricula;
+        for (campo in elmio) {
+            miCoche += campo+": "+elmio[campo]+" ";
+        }
+        for (campo in eltuyo) {
+            tuCoche += campo+": "+eltuyo[campo]+" ";
+        }
+        document.getElementById('mio').innerHTML=miCoche;
+        document.getElementById('tuyo').innerHTML=tuCoche;
+    </script>
+</body>
+</html>
