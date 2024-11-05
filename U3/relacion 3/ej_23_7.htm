@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <input type="text" placeholder="introduce una frase" id="frase">
+    <input type="button" value="dividir frase" id="dividir">
+    <p id="res"></p>
+    <script>
+        var btn = document.getElementById('dividir');
+        btn.addEventListener("click", divideFrase, false);
+        function divideFrase() 
+        {
+            let acu="";
+            let frase = document.getElementById('frase').value;
+            frase = frase.split(" ");
+            for (let index = 0; index < frase.length; index++) {
+                acu+=frase[index]+"<br>"
+            }
+            document.getElementById('res').innerHTML=acu;
+        }
+    </script>
+</body>
+</html>

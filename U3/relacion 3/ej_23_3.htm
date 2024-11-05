@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <input type="text" placeholder="introduce una frase" id="frase">
+    <input type="text" placeholder="introduce la clave" id="clave">
+    <input type="button" value="buscar" id="buscar">
+    <p id="res"></p>
+    <script>
+        var btn = document.getElementById('buscar');
+        btn.addEventListener("click", busqueda, false);
+        function busqueda() 
+        {
+            let c = document.getElementById('clave').value;
+            let f = document.getElementById('frase').value;
+            let pos = f.search(c);
+            if (pos!==-1) {
+                document.getElementById('res').innerHTML="Se encuentra en la posicion: "+pos;
+            }else{
+                document.getElementById('res').innerHTML="La clave no se encuentra en la frase";
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <p id="cuatrimestre"></p>
+    <script>
+        var fecha = new Date();
+        var mes = fecha.getMonth()+1;
+        switch (mes) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                document.getElementById('cuatrimestre').innerHTML="Nos encontramos en el primer cuatrimestre del año";
+                break;                
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+                document.getElementById('cuatrimestre').innerHTML="Nos encontramos en el segundo cuatrimestre del año";
+                break;
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+                document.getElementById('cuatrimestre').innerHTML="Nos encontramos en el tercer cuatrimestre del año";
+                break;  
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>

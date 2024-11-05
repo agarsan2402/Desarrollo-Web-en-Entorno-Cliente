@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <input type="text" placeholder="Dime un numero" id="numero">
+    <input type="button" value="calcular raiz cuadrada" id="calculo">
+    <p id="res"></p>
+    <script>
+        var btn = document.getElementById('calculo');
+        btn.addEventListener("click", calculo, false);
+        function calculo() 
+        {
+            let n = parseInt(document.getElementById('numero').value);
+            n=Math.sqrt(n);
+            document.getElementById('res').innerHTML="La raiz cuadrada de ese numero es: "+n;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <input type="text" placeholder="introduce una frase" id="frase">
+    <input type="button" value="comprobar si es palindroma" id="comprobar">
+    <p id="res"></p>
+    <script>
+        var btn = document.getElementById('comprobar');
+        btn.addEventListener("click", esPalindroma, false);
+        function esPalindroma() 
+        {
+            let frase = document.getElementById('frase').value;
+            let reves = "";
+            for (let index = frase.length-1; index >= 0; index--) {
+                reves += frase.charAt(index);
+            }
+            if (frase == reves) {
+                document.getElementById('res').innerHTML="La frase es palindroma";
+            } else {
+                document.getElementById('res').innerHTML="La frase no es palindroma";
+            }
+            
+        }
+    </script>
+</body>
+</html>
