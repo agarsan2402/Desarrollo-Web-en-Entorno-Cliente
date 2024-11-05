@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago</title>
+</head>
+<body>
+    <h1 id="saludo"></h1>
+    <a href="https://myfpschool.com/" id="enlace"></a>
+    <div id="h"></div>
+    <script>
+        var aleatorio = Math.random()*1;
+        var fecha = new Date();
+        var hora = fecha.getHours();
+        if (aleatorio<0.5) {
+            document.getElementById('enlace').innerHTML = "myfpschool";
+        }else{
+            if (hora < 15) {
+                document.getElementById('saludo').innerHTML = "Buenos dias";
+            }else{
+                document.getElementById('saludo').innerHTML = "Buenas tardes";
+            }
+        }
+    </script>
+</body>
+</html>
