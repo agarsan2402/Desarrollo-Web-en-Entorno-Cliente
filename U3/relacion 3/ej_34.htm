@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 3 - Angel Garces Santiago</title>
+</head>
+<body>
+    <button id="boton">abrir ventana</button>
+    <script>
+        var btn = document.getElementById('boton');
+        btn.addEventListener("click", abrir, false);
+        function abrir() {
+            const ancho = 600;
+            const alto = 300;
+            const opciones = `width=${ancho},height=${alto}`;
+            window.open("","nueva",opciones);
+        }
+    </script>
+</body>
+</html>

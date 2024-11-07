@@ -1,75 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cuenta Atras</title>
-<style>
-    body{
-       
-    }
-    #ventana{
-        margin:auto;
-        display:block;
-        position:absolute;
-        height:200px;
-        width:400px;
-        background: pink;
-        border:solid 1px black;
-    }
-    #reloj{
-        position: absolute;
-        top:40px;
-        left:120px;
-        font-size: 80px;
-        color:dodgerblue;
-        text-align: center;
-    }
-</style>
-<script>
-    var segundos = 0;
-    var minutos = 1;
-    var llamada;
-    var ceromin='';
-    var ceroseg='';
-   
-    function cuentaAtras(){
-        devolvercero(minutos,segundos);
-        segundos = segundos % 60;
-        document.getElementById("reloj").innerHTML=ceromin+minutos+':'+ceroseg+segundos;
-         if (minutos ===0 && segundos ===0){
-            alert ("Se agotó su tiempo");
-            clearTimeOut(llamada);
+    <style>
+        /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #201e1ef1; /* Color de fondo oscuro */
+            color: #0f0; /* Color del texto en verde */
         }
-        if (segundos ==0){
-            minutos --;
-            segundos+=60;   
-        }   
-        segundos --;
-        var llamada = setTimeout(cuentaAtras,1000);
-    }
-   
-    function devolvercero(minutos,segundos){
-        if (minutos<10){
-            ceromin='0';
-           
+        /* Contenedor principal */
+        #contenedor {
+            margin: 100px auto;
+            padding: 5%;
+            width: 50%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            background: black;
+            border: solid 1px #333; /* Borde gris oscuro */
+            text-align: center;
         }
-        if (segundos<10){
-            ceroseg='0';
-           
-        }else {
-            ceroseg='';
+        /* Caja de selección de minutos */
+        #cajaSelect {
+            font-size: 30px;
+            color: rgb(0, 255, 0);
+            margin-bottom: 20px;
         }
-         return ceroseg;return ceromin;
-    }
-   
-</script>
+        /* Caja de visualización del temporizador */
+        #cajaReloj {
+            font-size: 80px;
+            color: rgb(0, 255, 0); /* Texto verde */
+        }
+    </style>
+    <script>
+        var segundos = 0; // Almacena los segundos restantes
+        var minutos = 0;  // Almacena los minutos restantes
+        var llamada;      // Variable para manejar el temporizador
+        var ceromin = ''; // Para añadir ceros a los minutos (si es necesario)
+        var ceroseg = ''; // Para añadir ceros a los segundos (si es necesario)
+
+        // Función para iniciar la cuenta regresiva
+        function cuentaAtras() {
+            devolvercero(minutos, segundos); // Formatea los minutos y segundos
+            document.getElementById("cajaReloj").innerHTML = ceromin + minutos + ':' + ceroseg + segundos;
+            
+            // Verificar si el tiempo se ha agotado
+            if (minutos === 0 && segundos === 0) {
+                alert("Se agotó su tiempo"); // Notificar al usuario que el tiempo ha terminado
+                clearTimeout(llamada);      // Detener el temporizador
+                return;
+            }
+
+            // Ajustar minutos y reiniciar segundos cuando llegan a 0
+            if (segundos === 0) {
+                minutos--;
+                segundos = 60;
+            }
+            segundos--; // Reducir los segundos en cada iteración
+            llamada = setTimeout(cuentaAtras, 1000); // Llamar nuevamente después de 1 segundo
+        }
+
+        // Función para añadir ceros cuando minutos o segundos son menores a 10
+        function devolvercero(min, seg) {
+            ceromin = (min < 10) ? '0' : '';
+            ceroseg = (seg < 10) ? '0' : '';
+        }
+
+        // Función para configurar el temporizador basado en la selección del usuario
+        function startTimer() {
+            clearTimeout(llamada); // Limpiar cualquier temporizador en ejecución
+            const select = document.getElementById("min"); // Obtener la selección del usuario
+            const valor = select.value;
+            
+            // Asignar minutos en función de la opción seleccionada
+            switch (valor) {
+                case "Min1":
+                    minutos = 10;
+                    break;
+                case "Min2":
+                    minutos = 20;
+                    break;
+                case "Min3":
+                    minutos = 30;
+                    break;
+                case "Min4":
+                    minutos = 40;
+                    break;
+            }
+            segundos = 0; // Reiniciar segundos a 0
+            cuentaAtras(); // Iniciar la cuenta regresiva
+        }
+    </script>
 </head>
-<body onload="cuentaAtras()">
-   <div id="ventana">
-       <div id="reloj">
-           
-       </div>
+<body>
+   <div id="contenedor">
+        <div id="cajaSelect">
+            <label for="minutos">Selecciona el minuto del temporizador:</label>
+            <!-- Menú desplegable para seleccionar el tiempo de la cuenta atrás -->
+            <select name="minutos" id="min" onchange="startTimer()">
+                <option value="Min1">10 min</option>
+                <option value="Min2">20 min</option>
+                <option value="Min3">30 min</option>
+                <option value="Min4">40 min</option>
+            </select>
+        </div>
+        <!-- Caja donde se muestra la cuenta regresiva -->
+        <div id="cajaReloj">00:00</div>
    </div>
 </body>
-</html>
+</html>  

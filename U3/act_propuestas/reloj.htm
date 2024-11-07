@@ -3,30 +3,51 @@
 <head>
 <title>Reloj</title>
 </head>
-<body>
-    <div id="laHora"></div>
+<body style="background-color: aquamarine;">
+    <div style="justify-content: center; display: flex; flex-direction: column;">
+        <h1 id="laHora" style="text-align: center; font-size: 80px;"></h1>
+        <div style="justify-content: center; display: flex;">
+            <button id="start">|></button>
+            <button id="stop">||</button>  
+        </div>
+            
+        
+        
+    </div>
+    
     <script>
         function crono(){
-        var elCrono;
-        var miFecha = new Date();
-        var horas = miFecha.getHours();
-        var minutos = miFecha.getMinutes();
-        var segundos = miFecha.getSeconds();
-        if (horas > 12){
-            ampm='pm';
-            horas-=12;
-        }else{
-            ampm='am';
-        }
-        if (horas<10){horas='0'+horas;}
-        if (minutos<10){minutos='0'+minutos;}
-        if (segundos<10){segundos='0'+segundos;}
-        var texto = document.getElementById('laHora');
-        texto.innerHTML=horas+':'+minutos+':'+segundos+' '+ampm;
+            var elCrono;
+            var miFecha = new Date();
+            var horas = miFecha.getHours();
+            var minutos = miFecha.getMinutes();
+            var segundos = miFecha.getSeconds();
+            if (horas > 12){
+                ampm='pm';
+                horas-=12;
+            }else{
+                ampm='am';
+            }
+            if (horas<10){horas='0'+horas;}
+            if (minutos<10){minutos='0'+minutos;}
+            if (segundos<10){segundos='0'+segundos;}
+            var texto = document.getElementById('laHora');
+            texto.innerHTML=horas+':'+minutos+':'+segundos+' '+ampm;
         }
         window.onload=function(){
-        elCrono = setInterval(crono,1000);
+            elCrono = setInterval(crono,1000);
         }
+        var stp = document.getElementById('stop');
+        stp.addEventListener("click",parar,false);
+        function parar() {
+            clearInterval(elCrono);
+        }
+        var str = document.getElementById('start');
+        str.addEventListener("click",empezar,false);
+        function empezar() {
+            elCrono = setInterval(crono,1000);
+        }
+        
     </script>
 </body>
 </html>

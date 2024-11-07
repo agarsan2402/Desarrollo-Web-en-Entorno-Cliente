@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ángel Garcés Santiago</title>
+</head>
+<style>
+    /* Estilos para el cuerpo del documento */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin-top: 50px;
+    }
+    /* Caja que contiene los elementos para el cálculo de Fibonacci */
+    #caja {
+        border: black 1px solid;
+        background-color: bisque;
+        width: 40%;
+        margin: 100px auto;
+    }
+</style>
+<body>
+    <!-- Caja principal para la secuencia Fibonacci -->
+    <div id="caja">
+        <h1>Secuencia Fibonacci</h1>
+        <!-- Input para pedir al usuario la cantidad de números de Fibonacci a generar -->
+        <input type="text" id="elementos" placeholder="¿cuantos numeros quieres?">
+        <!-- Botón para activar la generación de la secuencia -->
+        <input type="button" id="boton" value="generar">
+        <!-- Párrafo donde se mostrará el resultado de la secuencia -->
+        <p id="res"></p>
+    </div>
+
+    <script>
+        // Obtención del botón y asignación del evento de clic para iniciar la función generaFibo
+        var btn = document.getElementById('boton');
+        btn.addEventListener("click", generaFibo, false);
+
+        // Función recursiva para calcular el número Fibonacci en una posición específica
+        function fibo(num) {
+            if (num === 0) {
+                return 0; // Caso base: Fibonacci de 0 es 0
+            } else {
+                if (num === 1) {
+                    return 1; // Caso base: Fibonacci de 1 es 1
+                } else {
+                    // Caso recursivo: suma de los dos anteriores números de Fibonacci
+                    return fibo(num - 1) + fibo(num - 2);
+                }
+            }
+        }
+
+        // Función para generar y mostrar la secuencia de números de Fibonacci
+        function generaFibo() {
+            // Obtiene el número de elementos que el usuario desea generar
+            var num = document.getElementById('elementos').value;
+            var acu = ""; // Variable acumuladora para concatenar la secuencia
+
+            // Bucle para generar cada número Fibonacci hasta la cantidad deseada
+            for (let index = 0; index < num; index++) {
+                acu += fibo(index) + " "; // Agrega cada número a la cadena acu, separado por un espacio
+            }
+
+            // Muestra la secuencia generada en el párrafo con id="res"
+            document.getElementById('res').innerHTML = acu;
+        }
+    </script>
+</body>
+</html>
