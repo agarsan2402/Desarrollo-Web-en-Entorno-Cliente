@@ -1,0 +1,21 @@
+#contenedor{
+    display: flex;
+    border: 5px solid rgb(133, 129, 172);
+    background-color: rgb(203, 228, 243);
+    border-radius: 10px;
+    margin: 100px auto auto;
+    flex-direction: column;
+    width: 50%;
+}
+#box{
+    text-align: justify;
+    margin: 20px auto auto;
+}
+h1{
+    text-align: center;
+    text-decoration-line: underline;
+}
+#res{
+    color: red;
+    font-size: 20px;
+}
