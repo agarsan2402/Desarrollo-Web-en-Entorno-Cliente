@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago - Relacion 4</title>
+</head>
+<body>
+    <script>
+        var vector1=new Array(10).fill(null);
+        var vector2=[];
+        var vector3=[];
+        vector1 = vector1.map(function() {
+            return Math.floor(Math.random() * 500+1);
+        });
+        vector2=vector1.filter(menor);
+        function menor(dato) {
+            return dato<250;
+        }
+        vector3=vector1.filter(mayorIgual);
+        function mayorIgual(dato) {
+            return dato>=250;
+        }
+        console.log("Vector original:", vector1);
+        console.log("Vector con números menores a 250:", vector2);
+        console.log("Vector con números mayores o iguales a 250:", vector3);
+        console.log("Tamaño del vector con números menores a 250:", vector2.length);
+        console.log("Tamaño del vector con números mayores o iguales a 250:", vector3.length);
+    </script>
+</body>
+</html>

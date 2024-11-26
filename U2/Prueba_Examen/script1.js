@@ -50,12 +50,11 @@ function menu() {
     }
 }
 function restar() {
-    let a = prompt("Dime un numero a"); 
+    var a = prompt("Dime un numero a"); 
     let b = prompt("Dime un numero b"); 
     let res = a - b;
-    document.getElementById('res').innerHTML = "El resultado es: "+res;
+    document.getElementById('res').innerHTML = a;
 }
-
 function dividir() {
     let a = prompt("Dime un numero a"); 
     let b = prompt("Dime un numero b"); 
@@ -163,10 +162,10 @@ function mostrarEnBase() {
 }
 
 function menor57() {
+    var continuar;
     do {
         let num1=prompt("dime un numero positivo que sea menor de 57"), num2=prompt("dime otro numero positivo que sea menor de 57");
         let respuesta;
-        let continuar;
         if (num1<0||num2<0||num1>57||num2>57) {
             window.alert("has introducido algun numero negativo o mayor que 57");
         }else{
@@ -196,17 +195,17 @@ function pedirNum() {
 }
 
 function pedirNumSumar() {
-    let acu=0, cont=0, num=prompt("dime un numero, introduce el 9999 para deterne el programa");
+    let acu=0, cont=0, num=prompt("dime un numero, introduce el 9999 para detener el programa");
     while (num!=9999) {
         acu+=parseInt(num);
         cont++;
-        num=prompt("dime un numero, introduce el 9999 para deterne el programa"); 
+        num=prompt("dime un numero, introduce el 9999 para detener el programa"); 
     }
     document.getElementById('res').innerHTML="Has introducido "+cont+" numeros y la suma de todos da "+acu;
 }
 
 function pedirNumProducto() {
-    let acu=1, cont=0, num=prompt("dime un numero, introduce el 9999 para deterne el programa");
+    let acu=1, cont=0, num=prompt("dime un numero, introduce el 9999 para detener el programa");
     while (num!=9999) {
         acu*=parseInt(num);
         cont++;

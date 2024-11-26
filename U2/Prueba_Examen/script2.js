@@ -121,6 +121,5 @@ function mostrarDigitos() {
     }else{
         document.getElementById('res').innerHTML = "Introduce un numero del 1 al 99";
     }
-    document.getElementById('res').innerHTML = "El perimetro del cuadrado es: "+lado*4;
 }
 

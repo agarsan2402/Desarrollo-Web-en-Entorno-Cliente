@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Angel Garces Santiago - Relacion 4</title>
+</head>
+<body>
+    <script>
+        var vector = new Array(1000).fill(null);
+        for (let index = 1; index <= 10; index++) {
+            var aleatorio = Math.floor(Math.random()*1000);
+            while (vector[aleatorio] !== null) {
+                aleatorio = Math.floor(Math.random() * 1000);  // Vuelve a generar la posición si ya tiene premio
+            }
+            vector[aleatorio]=index*1000;
+        }
+        for (let i = 0; i < vector.length; i++) {
+            if (vector[i] !== null) {
+                console.log(`Número ${i + 1} - Premio: ${vector[i]}€`);
+            }
+        }
+    </script>
+</body>
+</html>

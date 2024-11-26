@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago</title>
+</head>
+<body>
+    <input type="text" placeholder="Dime una frase" id="cad">
+    <input type="text" placeholder="Dime la palabra a buscar" id="palabra">
+    <input type="button" value="Sacar ultima ocurrencia" id="btn">
+    <p id="res"></p>
+    <script>
+        var btn=document.getElementById('btn').addEventListener('click',ultimaOcurrencia,false);
+        function ultimaOcurrencia() {
+            var cad=document.getElementById('cad').value;
+            var palabra=document.getElementById('palabra').value;
+            var pos=cad.lastIndexOf(palabra);
+            if (pos<0) {
+                document.getElementById('res').innerHTML="Esa palabra no esta en el texto";
+            } else {
+                document.getElementById('res').innerHTML="La ultima ocurrencia de "+palabra+" esta en la posicion "+pos;
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

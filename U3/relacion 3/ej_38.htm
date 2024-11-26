@@ -6,15 +6,13 @@
     <title>Relacion 3 - Angel Garces Santiago</title>
 </head>
 <body>
-    <button id="boton">abrir ventana</button>
     <script>
-        var btn = document.getElementById('boton');
-        btn.addEventListener("click", abrir, false);
-        function abrir() {
-            const ancho = window.innerWidth;
-            const alto = window.innerHeight/2;
-            const opciones = `width=${ancho},height=${alto}`;
-            window.open("","nueva",opciones);
+        document.cookie = "testCookie=testValue; path=/";
+        // Comprobamos si la cookie se ha establecido correctamente
+        if (document.cookie.indexOf("testCookie") !== -1) {
+            alert("Las cookies están activadas.");
+        } else {
+            alert("Las cookies no están activadas.");
         }
     </script>
 </body>

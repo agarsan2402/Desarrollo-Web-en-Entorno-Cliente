@@ -1,0 +1,23 @@
+.contenedor{
+    display: flex;
+}
+.box{
+    margin: 100px auto;
+    background-color: rgb(198, 248, 248);
+    padding: 20px;
+    border: 5px rgb(3, 28, 107) dotted;
+    border-radius: 5px;
+}
+.box li{
+    color: rgb(3, 28, 107);
+    list-style: none;
+    font-size: 25px;
+}
+.box h1{
+    color: rgb(3, 28, 107);
+    text-decoration: underline;
+}
+.box p{
+    margin-left: 80px;
+    color: brown;
+}

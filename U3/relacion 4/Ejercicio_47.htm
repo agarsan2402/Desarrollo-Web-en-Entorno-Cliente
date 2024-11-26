@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago - Relacion 4</title>
+</head>
+<body>
+    <script>
+        var vector = new Array(5).fill(null);
+        var vector2;
+        vector = vector.map(function () {
+            return Math.floor(Math.random() * 1000 + 1);
+        });
+        console.log("Array original: "+vector);
+        vector2=vector.slice(3);
+        vector.splice(3);
+        console.log("Suma de los dos ultimos elementos: "+(vector2.reduce((acc,v)=>{return acc+v;})));
+        console.log("Array sin los dos ultimos: "+vector);
+    </script>
+</body>
+</html>
