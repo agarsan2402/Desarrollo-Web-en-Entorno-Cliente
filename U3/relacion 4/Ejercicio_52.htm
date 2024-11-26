@@ -6,6 +6,22 @@
     <title>Angel Garces Santiago</title>
 </head>
 <body>
-    
+    <script>
+        var vector1 = new Array(10).fill(null);
+        var vector2 = [];
+        var acu;
+        vector1 = vector1.map(function() {
+            return Math.floor(Math.random() * 100+1);
+        });
+        console.log(vector1)
+        for (let index = 1; index <= 1000; index++) {
+            if(vector1.indexOf(index)>=0){
+                acu=index;
+                break;
+            }
+        }
+        vector2=vector1.slice(vector1.indexOf(acu))
+        console.log(vector2)
+    </script>
 </body>
 </html>
