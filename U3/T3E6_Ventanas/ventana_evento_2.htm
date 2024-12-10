@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <title>Página con Javascript</title>
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="estilo.css">
+   </head>
+   <body>
+      
+      <div class="contenido">
+         <button onClick="abrirVentana();">abrir</button>
+         <button onClick="cerrarVentana();">cerrar</button>
+         <form>
+            <label for="x">Dime la coordenada x: </label>
+            <input id="x" type="text" >
+            <label for="y">Dime la coordenada y: </label>
+            <input id="y" type="text">
+            <input type="button" value="enviar" onclick="coordenadas()">
+            <br>
+            <input type="button" value="focus" onclick="focusVentana()">
+            <input type="button" value="quitar focus" onclick="blurVentana()">
+            <br>
+            <label for="color">Dime el color de la pagina: </label>
+            <select name="color" id="color">
+               <option value="red">Rojo</option>
+               <option value="green">Verde</option>
+               <option value="blue">Azul</option>
+            </select>
+            <br>
+            <label for="tiempo">¿Cuanto tiempo quieres que este la pagina abierta?(ms)</label>
+            <input type="number" name="" id="tiempo">
+            <br>
+            <label for="texto">¿Que texto quieres que aparezca?</label>
+            <input type="text"  id="texto">
+            <br>
+            <label for="tamañoLetra">Dime el tamaño de la letra</label>
+            <input type="number" name="" id="tLetra">
+            <label for="colorLetra">Dime el color de la letra</label>
+            <input type="color" id="cLetra">
+         </form>
+      </div>
+      
+   </body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    border: 5px black solid;
+    width: 55%;
+    margin: auto ;
+    padding: 10px;
+}
+.contenido button{
+    margin: auto;
+    width: 80px;
+    display: inline;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        //crear objeto
+        var perro={
+            //atributos
+            nombre:{first:"lele",second:"contreras"},
+            edad:12,
+            raza:"terrier",
+            //metodos
+            setNombre: function (nuevoNombre) {
+                perro.nombre.first=nuevoNombre
+            },
+            getNombre: function () {
+              return perro.nombre.first  
+            },
+            ladra: function () {
+                return "guau"
+            }
+        }
+        for (const key in perro) {
+            alert(key)
+            alert(perro[key])
+        }
+        //crear constructores de objeto
+        function Persona(nombre,apellidos,edad,altura) {
+            //atributos
+            this.nombre = nombre
+            this.apellidos = apellidos
+            this.edad = edad
+            this.altura = altura
+            //metodos
+            this.setNombre = function (nuevoNombre) {
+                this.nombre = nuevoNombre
+            }
+            this.getNombre = function () {
+                return this.nombre
+            }
+            this.nombreCompleto = function () {
+                return nombre +" "+ apellidos
+            }
+        }
+        //instancias del objeto persona
+        const papa = new Persona("paco","carmona",50,1.60)
+        const mama = new Persona("lola","gomez",50,1.70)
+        alert(papa.nombre)
+        alert(mama.nombreCompleto())
+        
+    </script>
+</body>
+</html>

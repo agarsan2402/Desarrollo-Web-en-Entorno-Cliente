@@ -6,19 +6,18 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Angel Garces Santiago</title>
 </head>
-<body>
+<body onload="cantidad()"><!--Al cargar la pagina llamamos a la funcion cantidad()-->
     <div class="contenedor">
         <h1>Juego de las matriculas</h1>
         <div class="datos">
             <label for="">Inserta aqui la matrícula (max - 4): </label>
-            <input id="matricula" type="text" placeholder="Ej: 1111">
-            <p id="res"></p>
+            <input id="matricula" type="text" placeholder="Ej: 1111"><!--Lo que haya en maricula se almacenara en la variable m-->
+            <input id="btn" type="button" value="Enviar"><!--Al pulsar el boton se guardara la informacion en la variable btn que accionara el listener-->
         </div>
-        <div class="botones">
-            <input id="btn1" type="button" value="Ver figura">
-            <input id="btn2" type="button" value="Mostrar %">
-        </div>
+        <h2 id="error"></h2><!--Aqui se muestra si la matricula no es correcta-->
+        <h1>Cantidad sobre 10000</h1>
+        <div id="cantidad"></div><!--Aqui se muestran las cantidades para cada figura-->
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script><!--Vinculamos el html con el script-->
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body >
+    <div id="fechaCompleta"></div>
+    <div id="hora"></div>
+    <div id="cuentaRegresiva"></div>
+    <script>
+        var start = 10;
+        //crear objeto date
+        function crono() {
+            var miFecha = new Date();
+            var texto = document.getElementById('fechaCompleta')
+            var hora = miFecha.getHours()
+            var minutos = miFecha.getMinutes()
+            var segundos = miFecha.getSeconds()
+            var ampm;
+            texto.innerHTML = miFecha //Fecha actual
+            texto = document.getElementById('hora')
+            //hora en formato 12
+            if (hora>12) {
+                ampm = 'pm'
+                hora-=12
+            } else {
+                ampm = 'am'
+            }
+            //para que los numeros menores de diez tengan 0 a la izq
+            if (hora<10) {hora='0'+hora;}
+            if (minutos<10) {minutos='0'+minutos;}
+            if (segundos<10) {segundos='0'+segundos;}
+            texto.innerHTML = hora+":"+minutos+":"+segundos+" "+ampm
+        }
+        function cuentaRegresiva() {
+            texto = document.getElementById('cuentaRegresiva')
+            if (start > 0) { // Verifica si el contador es mayor a 0
+                start--;
+                texto.innerHTML = start;
+            } else {
+                clearInterval(interval); // Detén el intervalo cuando llegue a 0
+                texto.innerHTML = "¡Tiempo terminado!";
+            }
+        }
+        //funciones setTimeout y setInterval
+        window.onload=function () {
+            interval=setInterval(crono, 1000);
+        }
+       /* window.onload=function () {
+            interval=setInterval(cuentaRegresiva, 1000);
+        }*/
+        /*window.onload=function(){
+            interval=setTimeout(window.close,1000);
+        }*/
+    </script>
+</body>
+</html>

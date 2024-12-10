@@ -1,44 +1,49 @@
+/*Fuente*/
 body{
     font-family: 'Courier New', Courier, monospace;
 }
+/*Caja del contenido*/
 .contenedor{
-    display: flex;
-    background-color:rgb(200, 209, 216);
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    margin: 50px auto;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
+    display: flex;/*flexbox*/
+    background-color:rgb(200, 209, 216);/*color de fondo*/
+    border: 5px solid rgb(0, 0, 0);/*borde*/
+    border-radius: 5px;/*estilo de borde redondeado*/
+    margin: 50px auto;/*margen*/
+    width: 70%;/*anchura*/
+    flex-direction: column;/*contenido en columnas*/
+    align-items: center;/*alineacion centrada de los elementos*/
+    padding: 50px;/*espacio interno*/
 }
+/*Subrayados en titulos h1*/
 .contenedor h1{
     text-decoration: underline;
 }
-
+/*Color de titulos h2*/
+.contenedor h2{
+    color:blueviolet;
+}
+/*Color para el id error*/
+#error{
+    color: red;
+}
+/*la clase datos*/
 .datos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 10px auto;
+    display: flex;/*flexbox*/
+    flex-direction: row;/*contenido en filas*/
+    gap: 20px;/*separacion de filas*/
+    margin: 10px auto;/*margen*/
 }
+/*las listas y parrafos dentro de la clase datos*/
 .datos p, li{
-    color: rgb(0, 26, 255);
-    font-weight: bold;
-    font-size: 20px;
+    color: rgb(0, 26, 255);/*color*/
+    font-weight: bold;/*grosor en negrita*/
+    font-size: 20px;/*tamaño de la fuente*/
 }
-.datos label{
-    font-size: 25px;
+/*label e input de la clase datos*/
+.datos label, input{
+    font-size: 25px;/*tamaño de fuente*/
 }
+/*input de la clase datos*/
 .datos input{
-    font-size: 25px;
-    width: 20%;
-}
-.botones{
-    display: flex;
-    direction: row;
-    gap: 20px;
-}
-.botones input{
-    font-size: 20px;
+    width: 20%;/*anchura*/
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago</title>
+</head>
+<body>
+    <script>
+        // Array con datos
+        var datos = [
+            "28924; Estepona",
+            "41013; Sevilla",
+            "28001; Madrid",
+            "29004; Málaga",
+            "28923; Alcorcón",
+            "28850; Torrejón de Ardoz",
+            "28941; Fuenlabrada"
+        ];
+        function buscar() {
+            var dato = document.getElementById('dato').value;
+            var encontrados = datos.filter(function(item) {
+                var aux = item.split("; "); // Dividir por el punto y coma
+                return aux[0].toLowerCase().includes(dato) || aux[1].toLowerCase().includes(dato);
+            });
+            if (encontrados.length > 0) {
+                document.getElementById('res').innerHTML=encontrados;
+            } else {
+                document.getElementById('res').innerHTML="No esta";
+            }
+        }
+    </script>
+    <input id="dato" type="text" placeholder="Dime la ciudad o CP">
+    <input type="button" value="buscar" onclick="buscar()">
+    <p id="res"></p>
+</body>
+</html>

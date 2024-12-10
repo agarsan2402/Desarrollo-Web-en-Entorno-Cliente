@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="texto"></div>
+    <script>
+        //crear array normal
+        var coches = ["kia", "volvo", "seat"]
+        alert(coches)
+        //crear arrays de mas dimensiones
+        var bidimensional = ["hola", "adios", ["jeje", "jaja"]];
+        console.log(bidimensional[2][0]); // Para verificar la salida
+        //funciones
+        //concat
+        var aux = coches.concat(bidimensional)
+        console.log(aux)
+        //fill
+        aux.fill(5)
+        console.log(aux);
+        var aux = coches.concat(bidimensional)
+        console.log(aux);
+        //filter
+        function llevaA(dato) {
+            return dato.indexOf("a")>=0
+        }
+        aux = aux.filter(llevaA)
+        console.log(aux);
+        //find
+        var valor = aux.find(llevaA)
+        console.log(valor)
+        //foreach
+        var texto = document.getElementById('texto')
+        function recorrerArray(item, index) {
+            texto.innerHTML+="index["+index+"]: "+item+"<br>"
+        }
+        aux.forEach(recorrerArray);
+        //includes
+        if (aux.includes("kia")) {
+            alert("esta")
+        } else {
+            alert("no esta")
+        }
+        //pop
+        aux.pop()
+        aux.forEach(recorrerArray)
+        //push
+        aux.push("adios")
+        aux.forEach(recorrerArray)
+        //shift
+        aux.shift()
+        aux.forEach(recorrerArray)
+        //slice
+        aux=aux.slice(2,3)
+        aux.forEach(recorrerArray)
+        //splice
+        aux.splice(0,0,"seat","loco","pepe")
+        aux.forEach(recorrerArray)
+        aux.splice(1,2)
+        aux.forEach(recorrerArray)
+        //valueOf
+        var aux2 = aux.valueOf()
+        aux2.forEach(recorrerArray)
+
+    </script>
+   
+</body>
+</html>

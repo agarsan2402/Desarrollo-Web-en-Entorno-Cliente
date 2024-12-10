@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta getCookie="clave" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+<body>
+    <script>
+        function setCookie() {
+            let cont = parseInt(getCookie('pulsaciones'))||0
+            cont++
+            document.cookie="pulsaciones="+cont+";expires="+new Date(new Date().getTime()+7*24*60*60*1000).toUTCString()+";"
+            document.getElementById('cookie').innerHTML = "Pulsaciones: " + cont;
+        }
+        function getCookie(clave) {
+            let nueva = clave+"="
+            let decode = decodeURIComponent(document.cookie)
+            let arrayCookies = decode.split(";")
+            for (let index = 0; index < arrayCookies.length; index++) {
+                let c = arrayCookies[index].trim()
+                if (c.indexOf(nueva)==0) {
+                    return c.substring(nueva.length)
+                }
+            }
+            return ""
+        }
+    </script>
+    <div id="cookie"></div>
+    <button onclick="setCookie()">Contador</button>
+</body>
+</html>

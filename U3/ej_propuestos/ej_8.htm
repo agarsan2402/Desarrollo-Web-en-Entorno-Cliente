@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Garces Santiago</title>
+</head>
+<body>
+    <script>
+        var perrillos = [ "Rocket", "Flash", "Bella", "Slugger"];
+        perrillos = perrillos.filter(eliminar);
+        function eliminar(dato) {
+            return dato.indexOf("c")<0 && dato.indexOf("C")<0;
+        }
+        console.log(perrillos.toString());//Console con c May
+        var ciudades = 'Manchester, London, Liverpool, Birmingham, Leeds, Carlisle';
+        perrillos = perrillos.concat(ciudades.split(","));
+        perrillos.unshift("Estepona")
+        console.log(perrillos.toString());//Console con c May
+        
+    </script>
+</body>
+</html>

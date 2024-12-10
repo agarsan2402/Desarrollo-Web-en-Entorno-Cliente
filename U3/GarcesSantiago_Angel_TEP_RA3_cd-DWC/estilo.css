@@ -1,0 +1,28 @@
+/* Estilo global para el cuerpo del documento */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Define la fuente principal para el texto */
+}
+
+/* Estilos para el contenedor principal */
+#container {
+    display: flex; /* Aplica un diseño de flexbox para organizar los elementos */
+    flex-direction: column; /* Organiza los elementos en una columna (de arriba hacia abajo) */
+    align-items: center; /* Centra los elementos horizontalmente dentro del contenedor */
+    border: 5px solid black; /* Agrega un borde negro de 5 píxeles de grosor */
+    border-radius: 10px; /* Redondea las esquinas del borde con un radio de 10 píxeles */
+    background-color: rgb(212, 212, 212); /* Establece un color de fondo gris claro */
+    padding: 35px; /* Agrega un espacio interno de 35 píxeles alrededor de los elementos */
+    width: 50%; /* Define que el ancho del contenedor sea el 50% del ancho de la página */
+    margin: auto 25%; /* Centra el contenedor horizontalmente y agrega márgenes automáticos */
+}
+
+/* Estilo para los párrafos */
+p {
+    text-align: justify; /* Justifica el texto para que se alinee a ambos lados del párrafo */
+    font-size: 25px; /* Establece el tamaño de la fuente en 25 píxeles */
+}
+
+/* Estilo para los campos de entrada (botón) */
+input {
+    font-size: 20px; /* Establece el tamaño de la fuente en los botones o campos de entrada en 20 píxeles */
+}

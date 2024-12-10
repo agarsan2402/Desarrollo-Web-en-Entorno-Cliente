@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+        //funcion recursiva
+        function factorial(num) {
+            //caso base
+            if (num==0) {
+                return 1
+            }else{
+                //lamada recursiva
+                return num*factorial(num-1)
+            }
+        }
+        alert(factorial(10))
+        // Función recursiva para calcular el número Fibonacci en una posición específica
+        function fibo(num) {
+            if (num === 0) {
+                return 0; // Caso base: Fibonacci de 0 es 0
+            } else {
+                if (num === 1) {
+                    return 1; // Caso base: Fibonacci de 1 es 1
+                } else {
+                    // Caso recursivo: suma de los dos anteriores números de Fibonacci
+                    return fibo(num - 1) + fibo(num - 2);
+                }
+            }
+        }
+        alert(fibo(24))
+    </script>
+</body>
+</html>
