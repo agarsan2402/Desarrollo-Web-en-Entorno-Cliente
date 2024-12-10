@@ -6,6 +6,27 @@
     <title>String</title>
 </head>
 <body>
-    
+    <script>
+        //search
+        var cadena = "hola mundo"
+        console.log(cadena.search("do"));
+        //slice
+        console.log(cadena.slice(7,10));
+        //substring
+        console.log(cadena.substring(2,7));
+        //substr
+        console.log(cadena.substr(2,4));//indicas longitud
+        //replace
+        cadena = cadena.replace("hola","callete")
+        console.log(cadena);
+        //upper y lowwer
+        console.log(cadena.toUpperCase())
+        //split
+        var arr = new Array()
+        arr = cadena.split(" ",2)
+        console.log(arr)
+        //repat
+        console.log(cadena.repeat(4)+" ")
+    </script>
 </body>
 </html>
